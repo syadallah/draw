@@ -16,7 +16,7 @@
     let drawing = false
 
     function draw_point() {
-      if (drawing === fasle)
+      if (drawing === false)
           return;
       const coords = d3.mouse(this);
 
@@ -31,8 +31,8 @@
       drawing = true;
     })
     svg.on('mouseup', () => {
-      drawing = fasle;
+      drawing = false;
     })
-    svg.on('mousemove', draw_point) 
+    svg.on('mousemove', draw_point)
     </script>
 </html>
