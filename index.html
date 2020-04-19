@@ -1,18 +1,26 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Webpage</title>
+        <title>DRAW</title>
         <meta name=viewport content="width=device-width, initial-scale=1">
+
 
     </head>
     <body>
       <h1 id='welcome'>Welcome to My Home Page</h1>
-      <div class=container>
-        <div class="row".
-        <p class="col-12">Hello. Do you want to view <a href="postions.html"> Previous Positions</a> ?</p>
-        <p class="col-12">Do you want to view <a href="education.html">Education</a> ?</p>
-        <p class="col-12">Do you want to view <a href="image.html">Image</a> ?</p>
-        </div>
-      </div>
+    <svg id="svg" style="width:100%; height:800px">
     </body>
+    <script>
+
+    const svg = d3.select('#svg');
+    function draw_point() {
+      const coords = d3.mouse(this);
+
+      svg.append('circle')
+         .attr("cx", coords[0])
+         .attr("cy", coords[1])
+         .attr("r", 5)
+         .style('fill', 'black');
+         
+    }
 </html>
