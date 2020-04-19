@@ -7,13 +7,17 @@
 
     </head>
     <body>
-      <h1 id='welcome'>Have fun drawing using the mouse</h1>
+    <h1 id='welcome'>Have fun drawing using the mouse</h1>
     <svg id="svg">
     </body>
     <script>
 
-    const svg = d3.select('#svg');
+    const svg = d3.select('#svg')
+    let drawing = false
+
     function draw_point() {
+      if (drawing === fasle)
+          return;
       const coords = d3.mouse(this);
 
       svg.append('circle')
@@ -23,6 +27,12 @@
          .style('fill', 'black');
 
     }
-    svg.on('mousemove', draw_point);
+    svg.on('mousedown', () => {
+      drawing = true;
+    })
+    svg.on('mouseup', () => {
+      drawing = fasle;
+    })
+    svg.on('mousemove', draw_point) 
     </script>
 </html>
