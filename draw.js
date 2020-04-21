@@ -1,5 +1,4 @@
-document.addEventlistener('DOMContentLoaded', () => {
-
+document.addEventListener('DOMContentLoaded', () => {
 let draw = false;
 let points = [];
 let lines = [];
@@ -34,6 +33,7 @@ document.querySelector('#erase').onclick = () => {
   points = []
   lines = []
 }
+}
 function draw_point(x, y, connect) {
   const color = document.querySelector('#color-picker').value;
   const thickness = document.querySelector ('#thickness-picker').value;
@@ -58,3 +58,4 @@ function draw_point(x, y, connect) {
   points.push(point)
 }
 render()
+})
