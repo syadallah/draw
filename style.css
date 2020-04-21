@@ -11,3 +11,19 @@ h1 {
   text-align: center;
   font-family: sans-serif;
 }
+option[target=_black] {
+  background: black;
+  color: black;
+}
+option[target=_red] {
+  background: red;
+  color: red;
+}
+option[target=_blue] {
+  background: blue;
+  color: blue;
+}
+option[target=_green] {
+  background: green;
+  color:green;
+}
